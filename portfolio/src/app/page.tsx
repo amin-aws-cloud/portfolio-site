@@ -20,10 +20,10 @@ const projects = [
   {
     title: "IAM Security Implementation",
     description:
-      "Comprehensive IAM strategy for a multi-account AWS org. Enforced least-privilege access, MFA policies, and role-based controls across 15+ accounts.",
-    tags: ["IAM", "Organizations", "SSO", "CloudTrail"],
+      "Comprehensive IAM strategy for a multi-account AWS org. Enforced least-privilege access, MFA policies, and role-based controls across 7+ accounts.",
+    tags: ["IAM", "Organisations", "MFA", "SSO"],
     icon: Shield,
-    metric: "15+ accounts secured",
+    metric: "7+ accounts secured",
     featured: true,
   },
   {
