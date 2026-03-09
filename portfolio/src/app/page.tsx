@@ -64,7 +64,7 @@ const projects = [
 
 const credentials = [
   "AWS (EC2, S3, Lambda, RDS, VPC, IAM)",
-  "IaC(Terraform, CloudFormation, AWS CDK)",
+  "IaC (Terraform, CloudFormation, AWS CDK)",
   "CI/CD (GitHub Actions)",
   "Serverless Architecture",
   "TypeScript, JavaScript, Python",
@@ -327,54 +327,6 @@ export default function Home() {
               })}
           </div>
 
-          <div className="mb-4 grid gap-4 md:grid-cols-2 md:gap-5">
-            {projects
-              .filter((p) => p.featured)
-              .map((project) => {
-                const Icon = project.icon;
-                return (
-                  <a
-                    key={project.title}
-                    href="#"
-                    className="animate-fade-up delay-9 group glass-strong hover-glow relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 md:p-8"
-                  >
-                    <div>
-                      <div className="mb-6 flex items-center justify-between">
-                        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary/15 group-hover:shadow-[0_0_16px_rgba(232,168,73,0.12)]">
-                          <Icon className="h-5 w-5" />
-                        </div>
-                        <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
-                      </div>
-                      <h3 className="mb-2 text-lg font-semibold text-foreground md:text-xl">
-                        {project.title}
-                      </h3>
-                      <p className="mb-8 text-sm leading-relaxed text-muted-foreground">
-                        {project.description}
-                      </p>
-                    </div>
-                    <div>
-                      <div className="mb-4 flex flex-wrap gap-1.5">
-                        {project.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="rounded-md bg-secondary px-2 py-0.5 font-mono text-[11px] text-secondary-foreground"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="flex items-center gap-2 border-t border-border pt-4">
-                        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                        <span className="font-mono text-xs font-medium text-primary">
-                          {project.metric}
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                );
-              })}
-          </div>
-
           {/* Secondary projects: compact */}
           {/* <div className="grid gap-4 md:grid-cols-2 md:gap-5">
             {projects
@@ -455,7 +407,7 @@ export default function Home() {
                 <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/amin-mohamed-9531a5361/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass hover-glow inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium text-foreground"
@@ -491,9 +443,9 @@ export default function Home() {
               </a>
             ))}
           </div>
-          {/* <p className="font-mono text-[11px] text-muted-foreground">
+          <p className="font-mono text-[11px] text-muted-foreground">
             {"Built with Next.js + Vercel"}
-          </p> */}
+          </p>
         </div>
       </footer>
     </div>
