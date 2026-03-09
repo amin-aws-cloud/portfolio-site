@@ -36,39 +36,54 @@ const projects = [
     featured: true,
   },
   {
-    title: "Serverless Data Pipeline",
+    title: "Next.js Portfolio Site on AWS Amplify",
     description:
-      "Real-time ingestion pipeline using Lambda, Kinesis, and DynamoDB. Processes 2M+ events/day with auto-scaling and dead-letter queue error handling.",
-    tags: ["Lambda", "Kinesis", "DynamoDB", "EventBridge"],
+      "Cloud-native portfolio website using Next.js and TypeScript, deployed on AWS Amplify with automated CI/CD pipeline triggered by GitHub commits. Infrastructure configured using AWS CDK with secure credential management via Secrets Manager.",
+    tags: ["Next.js", "AWS Amplify", "AWS CDK", "CI/CD", "TypeScript"],
     icon: Zap,
-    metric: "2M+ events/day",
-    featured: false,
+    metric: "Auto-deploy",
+    featured: true,
   },
   {
-    title: "Multi-Region Disaster Recovery",
+    title: "Serverless Contact Form System",
     description:
-      "Active-passive DR solution with Route 53 failover, cross-region S3 replication, and Aurora Global Database. Sub-minute RPO, under 5-minute RTO.",
-    tags: ["Route 53", "Aurora", "S3", "CloudFormation"],
+      "Built serverless REST API using Lambda, API Gateway, DynamoDB, and SES to automate customer inquiry processing with instant email confirmations. Deployed via Terraform achieving cost-efficient auto-scaling.",
+    tags: [
+      "Lambda",
+      "API Gateway",
+      "DynamoDB",
+      "SES",
+      "Terraform",
+      "CloudWatch",
+    ],
     icon: Globe,
-    metric: "<1 min RPO",
-    featured: false,
+    metric: "Auto-scaling",
+    featured: true,
   },
 ];
 
 const credentials = [
-  "AWS Solutions Architect",
-  "AWS Cloud Practitioner",
-  "Terraform Associate",
-  "Kubernetes (CKA)",
-  "AWS Security Specialty",
-  "AWS DevOps Engineer",
+  "AWS (EC2, S3, Lambda, RDS, VPC, IAM)",
+  "IaC(Terraform, CloudFormation, AWS CDK)",
+  "CI/CD (GitHub Actions)",
+  "Serverless Architecture",
+  "TypeScript, JavaScript, Python",
+  "Multi-AZ & High Availability",
 ];
 
 const socialLinks = [
-  { label: "Email", href: "mailto:hello@example.com", icon: Mail },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { label: "GitHub", href: "https://github.com", icon: Github },
-  { label: "Medium", href: "https://medium.com", icon: BookOpen },
+  { label: "Email", href: "a.moh4med1@gmail.com", icon: Mail },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/amin-mohamed-9531a5361/",
+    icon: Linkedin,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/orgs/amin-aws-cloud/repositories",
+    icon: Github,
+  },
+  { label: "Medium", href: "https://medium.com/@a.moh4med1", icon: BookOpen },
 ];
 
 /* ════════════════════════ PAGE ════════════════════════ */
@@ -110,7 +125,9 @@ export default function Home() {
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
             <Cloud className="h-4 w-4 text-primary" />
           </div>
-          <span className="text-sm font-medium text-foreground">Your Name</span>
+          <span className="text-sm font-medium text-foreground">
+            Amin Mohamed
+          </span>
         </div>
         <div className="flex items-center gap-1">
           {socialLinks.map((link) => (
@@ -137,7 +154,7 @@ export default function Home() {
               <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary/60 via-primary/20 to-transparent blur-md" />
               <div className="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-primary/20 ring-offset-2 ring-offset-background md:h-20 md:w-20">
                 <Image
-                  src="/images/profile.jpg"
+                  src="../../public/Amin_Profile_Photo.png"
                   alt="Profile photo"
                   fill
                   className="object-cover"
@@ -153,31 +170,31 @@ export default function Home() {
                 </span>
               </div>
               <span className="font-mono text-xs text-muted-foreground">
-                Cloud Infrastructure & Security
+                Cloud Engineer
               </span>
             </div>
           </div>
 
           {/* Headline */}
           <h1 className="animate-fade-up delay-2 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
-            <span className="text-gradient">I build the cloud</span>
+            <span className="text-gradient">Building scalable</span>
             <br />
-            <span className="text-gradient">infrastructure that</span>
+            <span className="text-gradient">cloud infrastructure</span>
             <br />
-            <span className="text-primary">ships products.</span>
+            <span className="text-primary">with modern tools.</span>
           </h1>
 
           {/* Sub-copy */}
           <p className="animate-fade-up delay-3 mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
             {
-              "AWS Cloud Engineer specializing in secure, production-grade infrastructure. I architect IAM strategies, automate with IaC, and build pipelines that let engineering teams move fast without breaking things."
+              "AWS Cloud Engineer specialising in secure, production-grade infrastructure. I architect IAM strategies, automate with IaC, and build pipelines that let engineering teams move fast without breaking things."
             }
           </p>
 
           {/* CTA row */}
           <div className="animate-fade-up delay-4 mt-8 flex flex-wrap items-center gap-3">
             <a
-              href="mailto:hello@example.com"
+              href="mailto:a.moh4med1@gmail.com"
               className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_0_24px_rgba(232,168,73,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(232,168,73,0.3)] hover:brightness-110"
             >
               <Mail className="h-4 w-4" />
@@ -185,7 +202,7 @@ export default function Home() {
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/orgs/amin-aws-cloud/repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="glass hover-glow inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium text-foreground"
@@ -205,10 +222,10 @@ export default function Home() {
           {/* Stat strip */}
           <div className="animate-fade-up delay-5 mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {[
-              { value: "5+", label: "Years on AWS" },
-              { value: "15+", label: "Accounts managed" },
-              { value: "99.99%", label: "Uptime SLA met" },
-              { value: "70%", label: "Deploy time cut" },
+              { value: "12", label: "Weeks intensive training" },
+              { value: "5+", label: "AWS services mastered" },
+              { value: "3+", label: "Portfolio projects" },
+              { value: "100%", label: "Infrastructure as Code" },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -230,7 +247,7 @@ export default function Home() {
           <div className="flex items-center gap-3 px-5">
             <Award className="h-4 w-4 shrink-0 text-primary" />
             <span className="shrink-0 text-xs font-semibold uppercase tracking-wider text-primary">
-              Certifications
+              Technical Skills
             </span>
             <div className="h-4 w-px bg-border" />
           </div>
@@ -258,7 +275,7 @@ export default function Home() {
             </span>
           </div>
           <h2 className="animate-fade-up delay-8 mb-12 max-w-lg text-2xl font-bold tracking-tight text-foreground md:mb-16 md:text-3xl">
-            {"Production infrastructure I've designed & deployed."}
+            {"Cloud infrastructure I've designed & deployed."}
           </h2>
 
           {/* Featured projects: large */}
@@ -310,8 +327,56 @@ export default function Home() {
               })}
           </div>
 
+          <div className="mb-4 grid gap-4 md:grid-cols-2 md:gap-5">
+            {projects
+              .filter((p) => p.featured)
+              .map((project) => {
+                const Icon = project.icon;
+                return (
+                  <a
+                    key={project.title}
+                    href="#"
+                    className="animate-fade-up delay-9 group glass-strong hover-glow relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 md:p-8"
+                  >
+                    <div>
+                      <div className="mb-6 flex items-center justify-between">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary/15 group-hover:shadow-[0_0_16px_rgba(232,168,73,0.12)]">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
+                      </div>
+                      <h3 className="mb-2 text-lg font-semibold text-foreground md:text-xl">
+                        {project.title}
+                      </h3>
+                      <p className="mb-8 text-sm leading-relaxed text-muted-foreground">
+                        {project.description}
+                      </p>
+                    </div>
+                    <div>
+                      <div className="mb-4 flex flex-wrap gap-1.5">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-md bg-secondary px-2 py-0.5 font-mono text-[11px] text-secondary-foreground"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex items-center gap-2 border-t border-border pt-4">
+                        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                        <span className="font-mono text-xs font-medium text-primary">
+                          {project.metric}
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                );
+              })}
+          </div>
+
           {/* Secondary projects: compact */}
-          <div className="grid gap-4 md:grid-cols-2 md:gap-5">
+          {/* <div className="grid gap-4 md:grid-cols-2 md:gap-5">
             {projects
               .filter((p) => !p.featured)
               .map((project) => {
@@ -357,7 +422,7 @@ export default function Home() {
                   </a>
                 );
               })}
-          </div>
+          </div> */}
         </section>
 
         {/* ══════════════ CTA ══════════════ */}
@@ -370,23 +435,23 @@ export default function Home() {
             />
 
             <p className="relative font-mono text-xs uppercase tracking-widest text-primary">
-              {"Let's build something"}
+              {"Open to opportunities"}
             </p>
             <h2 className="relative mx-auto mt-4 max-w-md text-balance text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-              Looking for a cloud engineer who ships?
+              Ready to engineer scalable cloud solutions
             </h2>
             <p className="relative mx-auto mt-3 max-w-sm text-sm text-muted-foreground">
               {
-                "I'm open to roles, contract work, and interesting architecture challenges."
+                "Seeking junior cloud engineering role to build multi-cloud infrastructure, automate deployments, and deliver robust solutions in Agile environments."
               }
             </p>
             <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:a.moh4med1@gmail.com"
                 className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_0_24px_rgba(232,168,73,0.2)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(232,168,73,0.3)] hover:brightness-110"
               >
                 <Mail className="h-4 w-4" />
-                hello@example.com
+                a.moh4med1@gmail.com
                 <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <a
@@ -410,7 +475,7 @@ export default function Home() {
             <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary/10">
               <Cloud className="h-3 w-3 text-primary" />
             </div>
-            <span className="text-xs text-muted-foreground">Your Name</span>
+            <span className="text-xs text-muted-foreground">Amin Mohamed</span>
           </div>
           <div className="flex items-center gap-4">
             {socialLinks.map((link) => (
@@ -426,9 +491,9 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <p className="font-mono text-[11px] text-muted-foreground">
+          {/* <p className="font-mono text-[11px] text-muted-foreground">
             {"Built with Next.js + Vercel"}
-          </p>
+          </p> */}
         </div>
       </footer>
     </div>
